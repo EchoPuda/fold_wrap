@@ -1,39 +1,33 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## Description
+Fold Wrap can auto wrap, and also can fold excess rows or expand them. This Widget is suitable for scenarios similar to the history of the search page.
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
+Folded
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
+<img width="397" alt="image" src="https://user-images.githubusercontent.com/48596516/174257031-341a8af4-76a6-472d-be4f-2ef86378effd.png">
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Expanded
 
-## Features
+<img width="396" alt="image" src="https://user-images.githubusercontent.com/48596516/174257173-766bb02e-0277-408c-8f59-8ad727bdd973.png">
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
-
+## How to Use
+Given `List<Widget>` and set which **line** needs to be **collapsed**, and can set `space` and `runSpace` like `Wrap`. And you should set the `extentHeight` for the **max height **of each row. Like that
 ```dart
-const like = 'sample';
+FoldWrap(
+    children: <Widget>[...],
+    extentHeight: 30,
+    spacing: 10,
+    runSpacing: 10,
+    isFold: ture, // controller fold
+    foldLine: 2,
+)
 ```
 
-## Additional information
+`foldWidget` can set the button at the end after folding.
+```dart
+FoldWrap(
+  foldWidget: Icon(..),
+  foldWidgetInEnd: true,
+)
+```
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+`foldWidgetInEnd` set that whether `foldWidget` is to be at the end of the line. Default is false.
