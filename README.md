@@ -31,3 +31,6 @@ FoldWrap(
 ```
 
 `foldWidgetInEnd` set that whether `foldWidget` is to be at the end of the line. Default is false.
+
+## The end
+If you have any questions or suggestions, you can ask them in the issue, and I will answer them as soon as possible.
